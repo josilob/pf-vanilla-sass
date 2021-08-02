@@ -1,9 +1,14 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+@import 'config';
+@import 'home';
+@import 'navigation';
+@import 'about';
+@import 'projects';
+@import 'contact';
 
-@mixin transition-ease {
-	transition: all 0.5s ease-in-out;
+body {
+	min-height: 100vh;
+	// font-family: 'Indie Flower', cursive;
+	font-family: 'Poppins', sans-serif;
+	line-height: 1;
+	overflow: hidden;
 }
