@@ -14,7 +14,7 @@
 		top: 0.5rem;
 		width: 28px;
 		height: 3px;
-		background: set-text-color($primary-color);
+		background: $white;
 		@include transition-ease;
 
 		&::before {
@@ -23,7 +23,7 @@
 			top: -8px;
 			width: 28px;
 			height: 3px;
-			background: set-text-color($primary-color);
+			background: $white;
 			@include transition-ease;
 		}
 
@@ -33,7 +33,7 @@
 			top: 8px;
 			width: 20px;
 			height: 3px;
-			background: set-text-color($primary-color);
+			background: $white;
 			@include transition-ease;
 		}
 

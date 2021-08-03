@@ -12,3 +12,54 @@ body {
 	line-height: 1;
 	overflow: hidden;
 }
+
+a {
+	color: set-text-color($primary-color);
+	text-decoration: none;
+}
+
+.text-secondary {
+	color: $secondary-color;
+}
+
+header {
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	padding: 1rem;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+
+	.social-icons {
+		position: fixed;
+		bottom: 1rem;
+		left: 1rem;
+
+		a {
+			padding: 0.4rem;
+			color: $white;
+			font-size: 1.7rem;
+			@include transition-ease;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+		a:nth-child(2) {
+			font-size: 1rem;
+		}
+	}
+}
+
+footer {
+	font: size 1rem;
+	position: fixed;
+	bottom: 0.4rem;
+	right: 1rem;
+	text-align: right;
+	padding: 1rem;
+	color: $white;
+}

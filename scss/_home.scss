@@ -1,27 +1,126 @@
 .home {
 	min-height: 100vh;
-	padding-top: 40vh;
+	padding-top: 45vh;
 	overflow: hidden;
 	align-items: center;
 	text-align: center;
-	background: linear-gradient(
-			to right,
-			rgba($primary-color, 0.9),
-			rgba($primary-color, 0.3)
-		),
-		url('../dist/images/model-1.jpeg') center top;
+	background: #2160ad;
 	background-size: cover;
+	position: relative;
 
-	&__name {
-		font-family: 'Indie Flower', cursive;
-		font-size: 5rem;
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-		border-bottom: 2px solid set-text-color($primary-color);
+	&__box {
+		z-index: 2;
 
-		&--last {
-			color: $secondary-color;
-			font-weight: 700;
+		&--name {
+			color: $white;
+			font-family: 'Indie Flower', cursive;
+			font-size: 5rem;
+			padding: 2.5rem;
+			margin-bottom: 1rem;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			// -webkit-box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
+			// box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
+			z-index: 2;
+
+			&--last {
+				color: $secondary-color;
+				font-weight: 700;
+			}
+		}
+
+		&--profession {
+			color: $primary-color;
+			font-size: 10rem;
+			font-weight: 800;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			text-shadow: 2px 2px 12px hsl(213, 97%, 25%);
+
+			&::before {
+				content: 'FULL';
+				color: $primary-color;
+				font-size: 5rem;
+				position: fixed;
+				top: calc(50% - 7rem);
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+			}
+
+			&::after {
+				content: 'STACK';
+				color: $primary-color;
+				font-size: 5rem;
+				position: fixed;
+				top: calc(50% + 7rem);
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+			}
+		}
+	}
+
+	&__links {
+		height: 5rem;
+		max-width: 40vw;
+		min-width: 600px;
+		position: fixed;
+		top: calc(50% + 13rem);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem;
+		color: #fff;
+
+		div {
+			max-width: 50%;
+			flex: 1;
+			background-color: $primary-color;
+			padding: 1.5rem 3rem;
+			margin: 1rem;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			justify-content: center;
+			align-items: center;
+		}
+
+		:nth-child(1) {
+			background: $primary-color;
+			@include transition-ease;
+
+			i {
+				background: $primary-color;
+				font-size: 1.25rem;
+				display: absolute;
+			}
+		}
+
+		:nth-child(2) {
+			@include transition-ease;
+			background: #1b4d8d;
+
+			a {
+				background-color: #1b4d8d;
+				color: #fff;
+			}
+
+			&:hover {
+				background-color: $primary-color;
+				cursor: pointer;
+
+				a {
+					background-color: $primary-color;
+				}
+			}
 		}
 	}
 }
