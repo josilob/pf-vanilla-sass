@@ -81,10 +81,11 @@
 		color: #fff;
 
 		div {
-			max-width: 50%;
+			// max-width: 50%;
+			max-height: 4rem;
 			flex: 1;
 			background-color: $primary-color;
-			padding: 1.5rem 3rem;
+			padding: 2em 3rem;
 			margin: 1rem;
 			color: #fff;
 			display: flex;
@@ -95,22 +96,45 @@
 
 		:nth-child(1) {
 			background: $primary-color;
-			@include transition-ease;
+			display: flex;
+			position: relative;
+
+			span {
+				position: absolute;
+				left: 2rem;
+
+				&::after {
+					content: '* click on the clipboard icon to copy my email';
+					position: absolute;
+					left: -12rem;
+					bottom: -3rem;
+					font-size: 0.75rem;
+					width: 600px;
+				}
+			}
 
 			i {
 				background: $primary-color;
-				font-size: 1.25rem;
-				display: absolute;
+				font-size: 1.75rem;
+				position: absolute;
+				right: 1rem;
 			}
 		}
 
 		:nth-child(2) {
 			@include transition-ease;
 			background: #1b4d8d;
+			position: relative;
+			text-align: center;
 
 			a {
+				@include transition-ease;
 				background-color: #1b4d8d;
 				color: #fff;
+				position: absolute;
+				inset: 0;
+				justify-content: center;
+				align-items: center;
 			}
 
 			&:hover {
