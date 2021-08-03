@@ -24,3 +24,21 @@ function toggleMenu() {
 		displayMenu = false;
 	}
 }
+
+function copyToClipboard(id) {
+	let r = document.createRange();
+	r.selectNode(document.getElementById(id));
+	window.getSelection().removeAllRanges();
+	window.getSelection().addRange(r);
+	document.execCommand('copy');
+	window.getSelection().removeAllRanges();
+}
+
+const clipboardBtn = document.getElementById('copyBtn');
+clipboardBtn.addEventListener('click', () => {
+	const checkmark = document.querySelector('.notify-bubble');
+	checkmark.classList.add('appear');
+	setTimeout(() => {
+		checkmark.classList.remove('appear');
+	}, 800);
+});

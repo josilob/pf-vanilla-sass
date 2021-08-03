@@ -26,20 +26,16 @@
 .home__box--name {
   color: #fff;
   font-family: 'Indie Flower', cursive;
-  font-size: 5rem;
+  font-size: 6rem;
+  font-weight: 400;
   padding: 2.5rem;
   margin-bottom: 1rem;
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
   z-index: 2;
-}
-
-.home__box--name--last {
-  color: #aeb0b2;
-  font-weight: 700;
 }
 
 .home__box--profession {
@@ -138,12 +134,17 @@
 }
 
 .home__links :nth-child(1) span::after {
-  content: '* click on the clipboard icon to copy my email';
+  content: '* click on the clipboard to copy';
   position: absolute;
-  left: -12rem;
+  left: -15rem;
   bottom: -3rem;
   font-size: 0.75rem;
   width: 600px;
+}
+
+.home__links :nth-child(1) #copyBtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .home__links :nth-child(1) i {
@@ -151,6 +152,39 @@
   font-size: 1.75rem;
   position: absolute;
   right: 1rem;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.home__links :nth-child(1) i:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  color: #c4c4c4;
+}
+
+.home__links :nth-child(1) .notify-bubble {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  top: -0.5rem;
+  right: -0.5rem;
+  padding: 2px 5px 2px 6px;
+  background-color: #fff;
+  color: #2975d1;
+  font-size: 1rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
 }
 
 .home__links :nth-child(2) {
@@ -183,6 +217,41 @@
 
 .home__links :nth-child(2):hover a {
   background-color: #2975d1;
+}
+
+.appear {
+  color: red;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .menu-btn {

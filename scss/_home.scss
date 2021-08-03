@@ -12,23 +12,19 @@
 		z-index: 2;
 
 		&--name {
-			color: $white;
+			color: #fff;
 			font-family: 'Indie Flower', cursive;
-			font-size: 5rem;
+			font-size: 6rem;
+			font-weight: 400;
 			padding: 2.5rem;
 			margin-bottom: 1rem;
 			position: fixed;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, -35%);
 			// -webkit-box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
 			// box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
 			z-index: 2;
-
-			&--last {
-				color: $secondary-color;
-				font-weight: 700;
-			}
 		}
 
 		&--profession {
@@ -104,13 +100,17 @@
 				left: 2rem;
 
 				&::after {
-					content: '* click on the clipboard icon to copy my email';
+					content: '* click on the clipboard to copy';
 					position: absolute;
-					left: -12rem;
+					left: -15rem;
 					bottom: -3rem;
 					font-size: 0.75rem;
 					width: 600px;
 				}
+			}
+
+			#copyBtn:hover {
+				transform: scale(1.1);
 			}
 
 			i {
@@ -118,6 +118,31 @@
 				font-size: 1.75rem;
 				position: absolute;
 				right: 1rem;
+				transition: none;
+
+				&:active {
+					transform: scale(0.9);
+					color: rgb(196, 196, 196);
+				}
+			}
+
+			.notify-bubble {
+				position: absolute;
+				width: 1.25rem;
+				height: 1.25rem;
+				top: -0.5rem;
+				right: -0.5rem;
+				padding: 2px 5px 2px 6px;
+				background-color: #fff;
+				color: $primary-color;
+				font-size: 1rem;
+				border-radius: 50%;
+				box-shadow: 1px 1px 1px gray;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				display: none;
+				// @include transition-ease;
 			}
 		}
 
@@ -146,5 +171,24 @@
 				}
 			}
 		}
+	}
+}
+
+.appear {
+	color: red;
+	display: flex !important;
+	animation: fadeOut 1s;
+	animation-delay: 0.3s;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	15% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
