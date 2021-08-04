@@ -4,6 +4,7 @@
 @import 'about';
 @import 'projects';
 @import 'contact';
+@import 'responsiveness';
 
 body {
 	min-height: 100vh;
@@ -14,7 +15,7 @@ body {
 }
 
 a {
-	color: set-text-color($primary-color);
+	color: #95bff2;
 	text-decoration: none;
 }
 

@@ -1,3 +1,4 @@
+// ########## NAVBAR ###########
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
@@ -24,7 +25,7 @@ function toggleMenu() {
 		displayMenu = false;
 	}
 }
-
+// ######### CLIPBOARD BUTTON #########
 function copyToClipboard(id) {
 	let r = document.createRange();
 	r.selectNode(document.getElementById(id));
@@ -40,5 +41,7 @@ clipboardBtn.addEventListener('click', () => {
 	checkmark.classList.add('appear');
 	setTimeout(() => {
 		checkmark.classList.remove('appear');
-	}, 800);
+	}, 1000);
 });
+
+// ############### MOUSEMOVE ################
