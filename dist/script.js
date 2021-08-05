@@ -45,3 +45,24 @@ clipboardBtn.addEventListener('click', () => {
 });
 
 // ############### MOUSEMOVE ################
+
+let img1 = document.getElementById('square');
+let img2 = document.getElementById('triangle');
+
+function imgMove(e) {
+	let x = e.clientX;
+	let y = e.clientY;
+	img1.style.left = x / 10 + 'px';
+	img1.style.top = y / 5 + 'px';
+	img2.style.right = x / 5 + 'px';
+	img2.style.bottom = y / 5 + 'px';
+}
+
+document.addEventListener('mousemove', imgMove, false);
+
+// function moveImages() {
+// 	if (img1 && img2) {
+// 		img1.addEventListener('mousemove', img1Move, false);
+// 		img2.addEventListener('mousemove', img2Move, false);
+// 	}
+// }

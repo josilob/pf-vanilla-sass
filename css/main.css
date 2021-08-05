@@ -29,19 +29,14 @@
   max-width: 20vw;
 }
 
-.home #circle {
-  right: 9rem;
-  bottom: 1rem;
-}
-
 .home #triangle {
   right: 3rem;
-  top: 6rem;
+  bottom: 9rem;
 }
 
 .home #square {
-  top: 10rem;
-  left: 1rem;
+  top: 16rem;
+  left: 3rem;
 }
 
 .home__box {
