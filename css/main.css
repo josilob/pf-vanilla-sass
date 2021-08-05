@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 .home {
   min-height: 100vh;
   padding-top: 45vh;
@@ -243,17 +247,15 @@
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-animation: fadeOut 1s;
-          animation: fadeOut 1s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation: fadeOut 1.2s;
+          animation: fadeOut 1.2s;
 }
 
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
   }
-  15% {
+  40% {
     opacity: 1;
   }
   100% {
@@ -265,7 +267,7 @@
   0% {
     opacity: 1;
   }
-  15% {
+  40% {
     opacity: 1;
   }
   100% {
@@ -493,8 +495,15 @@ main .social-icons a {
   transition: all 0.5s ease-in-out;
 }
 
-main .social-icons a:hover {
+main .social-icons a i {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .social-icons a i:hover {
   color: #aeb0b2;
+  -webkit-transform: scale(1.25) rotate(-20deg);
+          transform: scale(1.25) rotate(-20deg);
 }
 
 main .social-icons a:nth-child(2) {

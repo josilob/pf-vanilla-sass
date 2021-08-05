@@ -42,8 +42,6 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -35%);
-			// -webkit-box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
-			// box-shadow: 8px 8px 10px 11px rgba(0, 0, 0, 0.5);
 			z-index: 2;
 		}
 
@@ -196,15 +194,14 @@
 
 .appear {
 	display: flex !important;
-	animation: fadeOut 1s;
-	animation-delay: 0.3s;
+	animation: fadeOut 1.2s;
 }
 
 @keyframes fadeOut {
 	0% {
 		opacity: 1;
 	}
-	15% {
+	40% {
 		opacity: 1;
 	}
 	100% {

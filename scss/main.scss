@@ -8,7 +8,6 @@
 
 body {
 	min-height: 100vh;
-	// font-family: 'Indie Flower', cursive;
 	font-family: 'Poppins', sans-serif;
 	line-height: 1;
 	overflow: hidden;
@@ -45,8 +44,13 @@ main {
 			font-size: 1.7rem;
 			@include transition-ease;
 
-			&:hover {
-				color: $secondary-color;
+			i {
+				@include transition-ease;
+
+				&:hover {
+					color: $secondary-color;
+					transform: scale(1.25) rotate(-20deg);
+				}
 			}
 		}
 		a:nth-child(2) {

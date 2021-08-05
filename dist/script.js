@@ -1,4 +1,4 @@
-// ########## NAVBAR ###########
+// ############### NAVBAR ###############
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
@@ -25,7 +25,7 @@ function toggleMenu() {
 		displayMenu = false;
 	}
 }
-// ######### CLIPBOARD BUTTON #########
+// ############ CLIPBOARD BUTTON ############
 function copyToClipboard(id) {
 	let r = document.createRange();
 	r.selectNode(document.getElementById(id));
@@ -57,12 +57,4 @@ function imgMove(e) {
 	img2.style.right = x / 5 + 'px';
 	img2.style.bottom = y / 5 + 'px';
 }
-
 document.addEventListener('mousemove', imgMove, false);
-
-// function moveImages() {
-// 	if (img1 && img2) {
-// 		img1.addEventListener('mousemove', img1Move, false);
-// 		img2.addEventListener('mousemove', img2Move, false);
-// 	}
-// }
