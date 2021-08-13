@@ -42,6 +42,7 @@ clipboardBtn.addEventListener('click', () => {
 	setTimeout(() => {
 		checkmark.classList.remove('appear');
 	}, 1000);
+	clipboardBtn.classList.toggle('paused');
 });
 
 // ############### MOUSEMOVE ################

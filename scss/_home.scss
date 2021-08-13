@@ -128,7 +128,11 @@
 			}
 
 			#copyBtn:hover {
-				transform: scale(1.1);
+				animation: buzz 0.15s linear infinite;
+			}
+
+			.paused {
+				animation-play-state: paused !important;
 			}
 
 			i {
@@ -208,3 +212,5 @@
 		opacity: 0;
 	}
 }
+
+
