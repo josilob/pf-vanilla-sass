@@ -21,7 +21,7 @@
 						<a href="about.html" class="menu-nav__link"> About Me </a>
 					</li>
 					<li class="menu-nav__item">
-						<a href="projects.html" class="menu-nav__link"> My Projects </a>
+						<a href="projects.html" class="menu-nav__link"> My Work </a>
 					</li>
 					<li class="menu-nav__item">
 						<a href="contact.html" class="menu-nav__link"> Contact Me </a>
@@ -39,9 +39,7 @@
 				</div>
 
 				<div class="home__box">
-					<h1 class="home__box--name">
-						Bojan <span class="home__box--name--last">Josilo</span>
-					</h1>
+					<h1 class="home__box--name">Bojan Josilo</h1>
 					<h2 class="home__box--profession">DEVELOPER</h2>
 				</div>
 
@@ -92,6 +90,40 @@
 			src="https://kit.fontawesome.com/dc93c5b0a3.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="script.js"></script>
+		<script>
+			// Mousemove Script
+			let img1 = document.getElementById('square');
+			let img2 = document.getElementById('triangle');
+
+			function imgMove(e) {
+				let x = e.clientX;
+				let y = e.clientY;
+				img1.style.left = x / 10 + 'px';
+				img1.style.top = y / 5 + 'px';
+				img2.style.right = x / 5 + 'px';
+				img2.style.bottom = y / 5 + 'px';
+			}
+			document.addEventListener('mousemove', imgMove, false);
+
+			// Clipboard Copy Script
+			function copyToClipboard(id) {
+				let r = document.createRange();
+				r.selectNode(document.getElementById(id));
+				window.getSelection().removeAllRanges();
+				window.getSelection().addRange(r);
+				document.execCommand('copy');
+				window.getSelection().removeAllRanges();
+			}
+
+			const clipboardBtn = document.getElementById('copyBtn');
+			clipboardBtn.addEventListener('click', () => {
+				const checkmark = document.querySelector('.notify-bubble');
+				checkmark.classList.add('appear');
+				setTimeout(() => {
+					checkmark.classList.remove('appear');
+				}, 1000);
+				clipboardBtn.classList.toggle('paused');
+			});
+		</script>
 	</body>
 </html>

@@ -33,24 +33,65 @@
 			<section class="about">
 				<div class="about__bio">
 					<div class="about__bio--text">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam error
-							harum deserunt, autem eos soluta quos quaerat ullam quo, aperiam
-							voluptatum itaque voluptates iusto hic? Tenetur, eum velit et corrupti
-							laborum recusandae, voluptas ipsa harum nemo sapiente esse non modi,
-							nesciunt id. Fugit atque doloribus accusantium repudiandae quia? Nisi,
-							tempora repellat? Magnam voluptates, corporis voluptate laboriosam nam,
-							aut optio natus consectetur modi voluptatibus sapiente est quo? Assumenda
-							aliquid quod vitae dignissimos corporis iste accusantium amet rem, animi
-							aspernatur error ab, facere aliquam doloremque sequi vel quam in at odio
-							provident rerum, inventore mollitia atque! Commodi voluptatum maxime
-							cumque aperiam consequuntur.
-						</p>
+						<ul class="tabs">
+							<li><button data-tab="tab-1">Just Me!</button></li>
+							<li><button data-tab="tab-2">Why do I code?</button></li>
+							<li><button data-tab="tab-3">Skillset</button></li>
+						</ul>
+						<!-- FIRST SECTION -->
+						<section class="content-tab" id="tab-1">
+							<p>
+								Normally, tabbed navigation uses navigation buttons (tabs) arranged
+								together with the selected tab highlighted.
+							</p>
+							<p>
+								Imagine you’ve just walked into a video rental store. It’s not a big
+								place, and by glancing around you see clear labels for your favorite
+								genres such as action, thriller, and romance (though you won’t admit it
+								to your friends). You make your way to the "Action" section knowing
+								without much thought that’s where the action movies are. After deciding
+								there aren’t any movies that interest you, it’s just as easy to look up
+								and see where else you can snoop around relative to where you are now.
+							</p>
+						</section>
+						<!-- SECOND SECTION -->
+						<section class="content-tab" id="tab-2">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo
+								pariatur consequuntur saepe commodi rerum quibusdam fugit ea. Inventore,
+								ex.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+								facilis non itaque magni aperiam officiis incidunt ipsam odit id optio
+								omnis maxime, aspernatur a, assumenda labore qui vitae, iure molestias
+								enim. Totam minus provident suscipit placeat. Quisquam laborum nihil
+								eius autem unde voluptatibus ipsam alias saepe, aspernatur omnis quam ea
+								sit nobis nam nisi pariatur similique, at dolorem officiis asperiores
+								sapiente error itaque natus! Neque iure debitis quam, est sint nulla
+								saepe esse vitae obcaecati repellendus, iste repudiandae ducimus omnis.
+							</p>
+						</section>
+						<!-- THIRD SECTION -->
+						<section class="content-tab" id="tab-3">
+							<p>
+								Normally, tabbed navigation uses navigation buttons (tabs) arranged
+								together with the selected tab highlighted.
+							</p>
+							<p>
+								Imagine you’ve just walked into a video rental store. It’s not a big
+								place, and by glancing around you see clear labels for your favorite
+								genres such as action, thriller, and romance (though you won’t admit it
+								to your friends). You make your way to the "Action" section knowing
+								without much thought that’s where the action movies are. After deciding
+								there aren’t any movies that interest you, it’s just as easy to look up
+								and see where else you can snoop around relative to where you are now.
+							</p>
+						</section>
 					</div>
 					<div class="about__bio--picture">
 						<div class="portrait">
 							<img src="images/bj-clr.png" alt="picture" />
-							<!-- <img src="images/bj-clr.png" alt="picture" id="pic2" /> -->
 						</div>
 					</div>
 				</div>
@@ -82,6 +123,35 @@
 			src="https://kit.fontawesome.com/dc93c5b0a3.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="script.js"></script>
+		<script>
+			let openIdx = 0;
+			let tabButtons = document.querySelectorAll('ul li button');
+			let contentTab = document.querySelectorAll('.content-tab');
+
+			function tabCurrent(thisTab) {
+				let idCurrent = thisTab.dataset.tab;
+
+				for (let i = 0; i < tabButtons.length; i++) {
+					tabButtons[i].classList.remove('current');
+				}
+				thisTab.classList.add('current');
+
+				for (let i = 0; i < contentTab.length; i++) {
+					if (idCurrent === contentTab[i].id) {
+						contentTab[i].classList.add('current-content-tab');
+					} else {
+						contentTab[i].classList.remove('current-content-tab');
+					}
+				}
+			}
+
+			for (let i = 0; i < tabButtons.length; i++) {
+				tabButtons[i].onclick = function () {
+					tabCurrent(this);
+				};
+			}
+
+			tabCurrent(tabButtons[openIdx]);
+		</script>
 	</body>
 </html>

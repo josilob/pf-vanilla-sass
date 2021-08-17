@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 $primary-color: hsl(213, 67%, 49%);
-$secondary-color: hsl(213, 2%, 69%);
+$secondary-color: #de861b;
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	// border: 1px solid red;
+	// outline: 1px solid red;
 }
 
 a:visited {
@@ -19,11 +20,12 @@ a:visited {
 	transition: all 0.5s ease-in-out;
 }
 
-@function set-text-color($color) {
-	@if (lightness($color) >40%) {
-		@return #000;
-	} @else {
-		@return #fff;
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -68,6 +70,14 @@ a:visited {
 	100% {
 		-webkit-transform: translateX(-2px) rotate(-2deg);
 		transform: translateX(-2px) rotate(-2deg);
+	}
+}
+
+@function set-text-color($color) {
+	@if (lightness($color) >40%) {
+		@return #000;
+	} @else {
+		@return #fff;
 	}
 }
 
