@@ -654,7 +654,27 @@ a:visited {
   letter-spacing: 1.5px;
   padding: 0rem 2rem;
   color: #fff;
-  text-shadow: 2px 2px 10px #000;
+  text-shadow: 1px 1px 4px black;
+}
+
+.about__bio--text .content-tab p span.highlight--green {
+  font-weight: bolder;
+  background: linear-gradient(104deg, rgba(130, 255, 173, 0) 0.9%, #82ffad 2.4%, rgba(130, 255, 173, 0.5) 5.8%, rgba(130, 255, 173, 0.1) 93%, rgba(130, 255, 173, 0.7) 96%, rgba(130, 255, 255, 0) 98%), linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
+  padding: 0.05rem 8px;
+  -webkit-box-decoration-break: clone;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.about__bio--text .content-tab p span.highlight--yellow {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 225, 0, 0.1)), color-stop(4%, rgba(255, 225, 0, 0.7)), to(rgba(255, 225, 0, 0.3)));
+  background-image: linear-gradient(to right, rgba(255, 225, 0, 0.1), rgba(255, 225, 0, 0.7) 4%, rgba(255, 225, 0, 0.3));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .about__bio--text .current-content-tab {
