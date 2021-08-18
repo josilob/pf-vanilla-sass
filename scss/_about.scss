@@ -1,6 +1,8 @@
 .about {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	padding-top: 5rem;
 	background-color: #2160ade5;
 	background-image: url(../dist/images/wall-texture.jpeg);
@@ -11,21 +13,21 @@
 	height: 100vh;
 
 	&__bio {
-		height: calc(100vh - 5rem);
-		max-height: 100vh;
-		width: 100%;
+		height: 80%;
+		width: 90%;
 		display: flex;
 		justify-content: center;
+		// border: 1px solid red;
 
 		&--picture {
 			flex: 1;
-			display: relative;
+			position: relative;
 
 			.portrait img {
 				position: absolute;
 				bottom: 0;
-				right: 2rem;
-				height: calc(100vh - 7.35rem);
+				right: 0;
+				height: 100%;
 				mix-blend-mode: multiply;
 				filter: drop-shadow(0px 0px 4px #02023f) brightness(0.85) contrast(3.5)
 					grayscale(1);
@@ -33,10 +35,11 @@
 		}
 
 		&--text {
-			flex: 1;
+			flex: 2;
 			z-index: 2;
-			margin: 2rem 2rem 4rem;
-			// border-radius: 10%;
+			margin: 2rem 2rem;
+			height: 95%;
+			overflow-y: scroll;
 
 			.tabs {
 				list-style: none;
@@ -82,11 +85,11 @@
 
 				p {
 					display: block;
-					line-height: 1.8rem;
-					font-size: 1.4rem;
+					line-height: 1.4;
+					font-size: calc(0.4rem + 1.8vmin);
 					font-weight: 300;
 					letter-spacing: 1.5px;
-					padding: 0rem 2rem;
+					padding: 0rem 2rem 0rem 0;
 					color: #fff;
 					text-shadow: 1px 1px 4px rgb(0, 0, 0);
 
@@ -107,7 +110,7 @@
 								rgba(130, 255, 173, 0.3) 7.9%,
 								rgba(130, 255, 173, 0) 15%
 							);
-						padding: 0.05rem 8px;
+						padding: 0.05rem 0.5rem;
 						-webkit-box-decoration-break: clone;
 						margin: 0;
 						border-radius: 0.5rem;
