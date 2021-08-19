@@ -37,10 +37,11 @@ main {
 			padding: 0.4rem;
 			color: #fff;
 			font-size: 2rem;
+			text-shadow: 3px 3px 3px #000;
 			@include transition-ease;
 
 			i {
-				@include transition-ease;
+				transition: all 0.15s ease-in-out;
 
 				&:hover {
 					transform: scale(1.3) rotate(15deg);

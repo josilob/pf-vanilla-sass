@@ -123,8 +123,17 @@
 				setTimeout(() => {
 					checkmark.classList.remove('appear');
 				}, 1000);
-				clipboardBtn.classList.toggle('paused');
 			});
+
+			clipboardBtn.addEventListener('mouseenter', () =>
+				clipboardBtn.classList.add('buzz')
+			);
+			clipboardBtn.addEventListener('mouseleave', () =>
+				clipboardBtn.classList.remove('buzz')
+			);
+			clipboardBtn.addEventListener('click', () =>
+				clipboardBtn.classList.remove('buzz')
+			);
 		</script>
 	</body>
 </html>
