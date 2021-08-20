@@ -8,9 +8,10 @@
 	background-image: url(../dist/images/wall-texture.jpeg);
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
-	height: 100vh;
+	min-height: 100vh;
 
 	&__bio {
 		height: 80%;
