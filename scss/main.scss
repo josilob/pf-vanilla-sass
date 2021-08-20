@@ -41,10 +41,11 @@ main {
 			@include transition-ease;
 
 			i {
-				transition: all 0.15s ease-in-out;
+				transition: all 0.2s ease-in-out;
 
 				&:hover {
 					transform: scale(1.3) rotate(15deg);
+					cursor: pointer;
 				}
 			}
 		}
