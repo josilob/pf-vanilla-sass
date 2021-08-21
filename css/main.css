@@ -793,6 +793,11 @@ a:visited {
           filter: invert(1);
 }
 
+.work .projects * {
+  display: block;
+  margin-top: 1rem;
+}
+
 .work .projects .project {
   line-height: 1.2;
   position: relative;
@@ -802,30 +807,57 @@ a:visited {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   -webkit-box-align: center;
-  -ms-flex-align: center;
-      align-items: center;
   margin-bottom: 100px;
   visibility: visible;
   opacity: 1;
-  height: 22rem;
   width: 65vw;
+  gap: 10px;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .work .projects .project-image {
-  position: absolute;
-  z-index: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: 1 / 1 / -1 / 8;
 }
 
 .work .projects .project-image a {
-  background-image: url(../dist/images/cineprime.jpg);
-  background-color: yellow;
+  width: 100%;
+  height: 100%;
+}
+
+.work .projects .project-image a img {
   width: 100%;
   height: 100%;
 }
 
 .work .projects .project-content {
-  position: absolute;
+  text-align: left;
+  grid-area: 1 / 6 / -1 / -1;
   z-index: 2;
+  font-size: 1.2rem;
+}
+
+.work .projects .project-content p {
+  color: #fff;
+  text-align: right;
+}
+
+.work .projects .project:nth-of-type(2n + 1) .project-content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: 1 / 1 / -1 / 7;
+}
+
+.work .projects .project:nth-of-type(2n + 1) .project-content p {
+  text-align: left;
+}
+
+.work .projects .project:nth-of-type(2n + 1) .project-image {
+  grid-area: 1 / 6 / -1 / -1;
 }
 
 @media screen and (min-width: 768px) {
