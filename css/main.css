@@ -5,6 +5,8 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a:visited {
@@ -774,8 +776,8 @@ a:visited {
 }
 
 .work .skills .skillset .tech-icons img:hover {
-  -webkit-filter: drop-shadow(2px 2px 15px #fff) saturate(3);
-          filter: drop-shadow(2px 2px 15px #fff) saturate(3);
+  -webkit-filter: drop-shadow(2px 2px 20px #fff) saturate(3);
+          filter: drop-shadow(2px 2px 20px #fff) saturate(3);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   cursor: pointer;
@@ -815,9 +817,19 @@ a:visited {
   width: 55rem;
   height: 20rem;
   gap: 10px;
-  background-color: rgba(29, 28, 26, 0.35);
-  -webkit-backdrop-filter: blur(1.5px);
-          backdrop-filter: blur(1.5px);
+  background-color: rgba(26, 27, 29, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.work .projects .project:hover a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1.5;
+  background-color: rgba(0, 29, 71, 0.4);
+  mix-blend-mode: darken;
+  opacity: 0;
 }
 
 .work .projects .project-image {
@@ -825,6 +837,7 @@ a:visited {
   -ms-grid-column-span: 7;
   grid-area: 1 / 1 / -1 / 8;
   margin: 0;
+  position: relative;
 }
 
 .work .projects .project-image a {
@@ -839,12 +852,23 @@ a:visited {
   margin: 0;
 }
 
+.work .projects .project-image a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1.5;
+  background-color: rgba(41, 117, 209, 0.5);
+  mix-blend-mode: darken;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
 .work .projects .project-content {
   text-align: left;
   grid-area: 1 / 6 / -1 / -1;
   z-index: 2;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+  font-size: 1rem;
   color: #fff;
   text-align: right;
   height: 100%;
@@ -859,22 +883,27 @@ a:visited {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none;
 }
 
 .work .projects .project-content .overline {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: -1.2rem;
+  letter-spacing: -0.5px;
 }
 
 .work .projects .project-content .project-title {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .work .projects .project-content .project-description {
-  font-size: 1.15rem;
-  background-color: rgba(29, 28, 26, 0.75);
+  font-size: 1rem;
+  background-color: rgba(17, 34, 64, 0.9);
   margin: 0 -1rem;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .work .projects .project-content .tech-list {
@@ -884,6 +913,7 @@ a:visited {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  list-style: none;
 }
 
 .work .projects .project-content .tech-list li {
@@ -891,17 +921,30 @@ a:visited {
   font-size: 1rem;
   padding: 5px;
   border-radius: 5px;
-  background-color: rgba(29, 28, 26, 0.5);
+  background-color: rgba(29, 29, 27, 0.45);
 }
 
 .work .projects .project-content .project-links a i {
   font-size: 1.5rem;
   color: #fff;
   margin: 0;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  pointer-events: auto;
+  display: inline;
+  text-shadow: 2px 2px 3px #000;
+  outline: 0.5px dashed #fff;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .work .projects .project-content .project-links a:hover {
   cursor: pointer;
+}
+
+.work .projects .project-content .project-links a:hover i {
+  outline: 2px dashed #e3a151;
+  color: #e3a151;
 }
 
 .work .projects .project:nth-of-type(2n + 1) .project-content {
