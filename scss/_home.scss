@@ -7,7 +7,6 @@
 	position: relative;
 	overflow: hidden;
 	background-color: hsl(213, 64%, 40%);
-	// background-image: url(../images/wall-texture.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -108,13 +107,14 @@
 			max-height: 4rem;
 			flex: 1;
 			background-color: $primary-color;
-			padding: 2em 3rem;
+			padding: 1.8em 3rem;
 			margin: 1rem;
 			color: #fff;
 			display: flex;
 			justify-content: space-between;
 			justify-content: center;
 			align-items: center;
+			font-size: 1.3rem;
 		}
 
 		:nth-child(1) {
@@ -124,7 +124,7 @@
 
 			span {
 				position: absolute;
-				left: 2rem;
+				left: 1.5rem;
 				letter-spacing: 1px;
 
 				&::after {
