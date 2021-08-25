@@ -44,16 +44,11 @@
 				</div>
 
 				<div class="home__links">
-					<div>
-						<span id="email">bjosilo@gmail.com</span>
-						<i
-							id="copyBtn"
-							class="fas fa-paste"
-							onclick="copyToClipboard('email')"
-						></i>
-						<i class="notify-bubble">&#10003;</i>
+					<div id="email" onclick="copyToClipboard('email')">
+						bjosilo@gmail.com
+						<i class="notify-bubble">Copied</i>
 					</div>
-					<div>
+					<div id="resume">
 						<a
 							href="https://drive.google.com/file/d/1XI8ULo3X8ZIEZAUQsM0c9fd1c_41w8Ri/view?usp=sharing"
 							target="_blank"
@@ -116,8 +111,8 @@
 				window.getSelection().removeAllRanges();
 			}
 
-			const clipboardBtn = document.getElementById('copyBtn');
-			clipboardBtn.addEventListener('click', () => {
+			const emailBtn = document.getElementById('email');
+			emailBtn.addEventListener('click', () => {
 				const checkmark = document.querySelector('.notify-bubble');
 				checkmark.classList.add('appear');
 				setTimeout(() => {
@@ -125,15 +120,13 @@
 				}, 1000);
 			});
 
-			clipboardBtn.addEventListener('mouseenter', () =>
-				clipboardBtn.classList.add('buzz')
+			emailBtn.addEventListener('mouseenter', () =>
+				emailBtn.classList.add('buzz')
 			);
-			clipboardBtn.addEventListener('mouseleave', () =>
-				clipboardBtn.classList.remove('buzz')
+			emailBtn.addEventListener('mouseleave', () =>
+				emailBtn.classList.remove('buzz')
 			);
-			clipboardBtn.addEventListener('click', () =>
-				clipboardBtn.classList.remove('buzz')
-			);
+			emailBtn.addEventListener('click', () => emailBtn.classList.remove('buzz'));
 		</script>
 	</body>
 </html>

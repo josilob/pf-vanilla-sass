@@ -111,62 +111,43 @@
 			margin: 1rem;
 			color: #fff;
 			display: flex;
-			justify-content: space-between;
 			justify-content: center;
 			align-items: center;
 			font-size: 1.3rem;
 		}
 
-		:nth-child(1) {
-			background: $primary-color;
+		#email {
+			background-color: $primary-color;
 			display: flex;
 			position: relative;
+			@include transition-ease;
 
-			span {
-				position: absolute;
-				left: 1.5rem;
-				letter-spacing: 1px;
-
-				&::after {
-					content: '* click on the clipboard to copy';
-					position: absolute;
-					left: -13.2rem;
-					bottom: -3.2rem;
-					font-size: 0.85rem;
-					width: 600px;
-				}
+			&:hover {
+				cursor: pointer;
+				background-color: #1b4d8d;
 			}
 
-			.buzz {
-				animation: buzz 0.15s linear infinite;
-			}
-
-			i {
-				background: $primary-color;
-				font-size: 1.75rem;
+			&::after {
+				content: '* click on the email to copy';
 				position: absolute;
-				right: 1rem;
-				transition: none;
-				text-shadow: 3px 3px 5px #000;
-				padding: 2px;
-
-				&:active {
-					transform: scale(0.9);
-					color: rgb(196, 196, 196);
-				}
+				left: -12rem;
+				bottom: -1.75rem;
+				font-size: 1rem;
+				width: 600px;
 			}
 
 			.notify-bubble {
 				position: absolute;
-				width: 1.25rem;
-				height: 1.25rem;
+				width: 5.25rem;
+				height: 1.35rem;
 				top: -0.5rem;
 				right: -0.5rem;
 				padding: 2px 5px 2px 6px;
-				background-color: rgb(132, 225, 92);
+				background-color: #95bff2;
 				color: #fff;
 				font-size: 1rem;
-				border-radius: 50%;
+				font-weight: 600;
+				border-radius: 5px;
 				box-shadow: 1px 1px 1px gray;
 				display: flex;
 				justify-content: center;
@@ -175,29 +156,18 @@
 			}
 		}
 
-		:nth-child(2) {
-			@include transition-ease;
+		#resume {
 			background: #1b4d8d;
-			position: relative;
-			text-align: center;
+			@include transition-ease;
 
 			a {
-				@include transition-ease;
-				background-color: #1b4d8d;
+				background-color: transparent;
 				color: #fff;
-				position: absolute;
-				inset: 0;
-				justify-content: center;
-				align-items: center;
 			}
 
 			&:hover {
 				background-color: $primary-color;
 				cursor: pointer;
-
-				a {
-					background-color: $primary-color;
-				}
 			}
 		}
 	}
@@ -205,5 +175,5 @@
 
 .appear {
 	display: flex !important;
-	animation: fadeOut 1.2s;
+	animation: fadeOut 1.5s;
 }
