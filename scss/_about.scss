@@ -5,7 +5,7 @@
 	align-items: center;
 	padding-top: 5rem;
 	background-color: #2160ade5;
-	background-image: url(../dist/images/wall-texture.jpeg);
+	background-image: url(../images/wall-texture.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -13,11 +13,16 @@
 	background-blend-mode: multiply;
 	min-height: 100vh;
 
+	* {
+		// outline: 1px red solid;
+	}
+
 	&__bio {
 		height: 80%;
 		width: 90%;
 		display: flex;
 		justify-content: center;
+		// position: relative;
 
 		&--picture {
 			flex: 1;
@@ -25,11 +30,13 @@
 
 			.portrait img {
 				position: absolute;
-				bottom: 0;
+				top: 17.5rem;
 				right: 0;
-				height: 100%;
+				transform: translateY(-50%);
+				height: 40vw;
+				max-height: 60rem;
 				mix-blend-mode: multiply;
-				filter: drop-shadow(0px 0px 4px #02023f) brightness(0.85) contrast(3.5)
+				filter: drop-shadow(0px 0px 4px #02023f) brightness(0.9) contrast(3.5)
 					grayscale(1);
 			}
 		}
@@ -39,7 +46,7 @@
 			z-index: 2;
 			margin: 2rem 2rem;
 			height: 95%;
-			overflow-y: scroll;
+			transform: translateY(-2rem);
 
 			.tabs {
 				list-style: none;

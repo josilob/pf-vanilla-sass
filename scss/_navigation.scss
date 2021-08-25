@@ -100,14 +100,40 @@
 
 			&.active > a {
 				color: #fff;
+				transform: translateY(-8px);
+				pointer-events: none;
+
+				&:before {
+					pointer-events: none;
+					position: absolute;
+					z-index: 1;
+					content: '';
+					top: 75%;
+					left: 5%;
+					height: 12px;
+					width: 90%;
+					opacity: 1;
+					background: -webkit-radial-gradient(
+						center,
+						ellipse,
+						rgba(0, 0, 0, 0.35) 0%,
+						rgba(0, 0, 0, 0) 80%
+					);
+					background: radial-gradient(
+						ellipse at center,
+						rgba(0, 0, 0, 0.35) 0%,
+						rgba(0, 0, 0, 0) 80%
+					);
+					transition: all 0.3s linear;
+				}
 			}
 		}
 
 		&__link {
 			display: inline-block;
-			font-size: 1.25rem;
+			font-size: 1.3rem;
 			text-transform: uppercase;
-			padding: 2rem;
+			padding: 1.9rem;
 			font-weight: 300;
 			@include transition-ease;
 

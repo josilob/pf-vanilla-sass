@@ -4,10 +4,16 @@
 	overflow: hidden;
 	align-items: center;
 	text-align: center;
-	background: #2160ad;
-	background-size: cover;
 	position: relative;
 	overflow: hidden;
+	background-color: hsl(213, 64%, 40%);
+	// background-image: url(../images/wall-texture.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	min-height: 100vh;
 
 	.shapes {
 		position: absolute;
