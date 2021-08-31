@@ -63,39 +63,13 @@ a:visited {
 	}
 }
 
-@keyframes buzz {
-	50% {
-		-webkit-transform: translateX(2px) rotate(2deg);
-		transform: translateX(2px) rotate(2deg);
-	}
-	100% {
-		-webkit-transform: translateX(-2px) rotate(-2deg);
-		transform: translateX(-2px) rotate(-2deg);
-	}
-}
-
-@function set-text-color($color) {
-	@if (lightness($color) >40%) {
-		@return #000;
-	} @else {
-		@return #fff;
-	}
-}
-
-@mixin media-md {
-	@media screen and (min-width: 768px) {
-		@content;
-	}
-}
-
-@mixin media-lg {
-	@media screen and (min-width: 1024px) {
-		@content;
-	}
-}
-
-@mixin media-xl {
-	@media screen and (min-width: 1600px) {
-		@content;
-	}
-}
+// @keyframes buzz {
+// 	50% {
+// 		-webkit-transform: translateX(2px) rotate(2deg);
+// 		transform: translateX(2px) rotate(2deg);
+// 	}
+// 	100% {
+// 		-webkit-transform: translateX(-2px) rotate(-2deg);
+// 		transform: translateX(-2px) rotate(-2deg);
+// 	}
+// }

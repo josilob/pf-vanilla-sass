@@ -1,3 +1,98 @@
+// {
+//     /* PC FIRST */
+// }
+// @media screen and (max-width: 1024px) {
+//     /* Tablet */
+// }
+// @media screen and (max-width: 768px) {
+//     /* Smart phone (landscape) */
+// }
+// @media screen and (max-width: 480px) {
+//     /* Smart phone (portrait) */
+// }
+
+// {
+//      /* MOBILE FIRST */
+// }
+// @media screen and (min-width: 481px) {
+//     /* Smart phone (landscape) */
+// }
+// @media screen and (min-width: 769px) {
+//     /* Tablet */
+// }
+// @media screen and (min-width: 1025px) {
+//     /* PC */
+// }
+
+@mixin media-sm {
+	@media (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin media-md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin media-xl {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}
+
+@include media-sm {
+	.home {
+		#square {
+			top: 6rem;
+			left: 3rem;
+		}
+
+		#triangle {
+			right: 0.5rem;
+			bottom: 38%;
+		}
+
+		&__box {
+			&--name {
+				font-size: calc(1rem + 7vmin);
+				top: 39.75%;
+			}
+			&--profession {
+				top: 41%;
+				font-size: calc(1rem + 12vmin);
+				transform: translate(-50%, -50%) scale(1, 1.15);
+			}
+		}
+
+		&__links {
+			display: block;
+			min-width: 18rem;
+			min-height: 14rem;
+			top: calc(50% + 12rem);
+			padding: 1.5rem;
+
+			div {
+				padding: 1.2em 2rem;
+				margin: 0 0 3rem 0;
+			}
+
+			#email {
+				&:after {
+					content: '* tap on the email to copy';
+				}
+			}
+		}
+	}
+}
+
 @include media-md {
 	.menu-btn {
 		visibility: hidden;
@@ -19,4 +114,10 @@
 			}
 		}
 	}
+}
+
+@include media-lg {
+}
+
+@include media-xl {
 }
