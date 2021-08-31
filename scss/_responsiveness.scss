@@ -73,7 +73,7 @@
 			display: block;
 			min-width: 18rem;
 			min-height: 14rem;
-			top: calc(50% + 12rem);
+			top: calc(50% + 9rem);
 			padding: 1.5rem;
 			div {
 				padding: 1.2em 2rem;
@@ -94,7 +94,7 @@
 			flex-direction: column-reverse;
 			align-items: center;
 			&--picture {
-				margin-top: 2rem;
+				margin-top: 1rem;
 				.portrait img {
 					top: 4rem;
 					left: 50%;
