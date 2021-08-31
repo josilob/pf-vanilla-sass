@@ -54,12 +54,10 @@
 			top: 6rem;
 			left: 3rem;
 		}
-
 		#triangle {
 			right: 0.5rem;
 			bottom: 38%;
 		}
-
 		&__box {
 			&--name {
 				font-size: calc(1rem + 7vmin);
@@ -71,22 +69,51 @@
 				transform: translate(-50%, -50%) scale(1, 1.15);
 			}
 		}
-
 		&__links {
 			display: block;
 			min-width: 18rem;
 			min-height: 14rem;
 			top: calc(50% + 12rem);
 			padding: 1.5rem;
-
 			div {
 				padding: 1.2em 2rem;
 				margin: 0 0 3rem 0;
 			}
-
 			#email {
 				&:after {
 					content: '* tap on the email to copy';
+				}
+			}
+		}
+	}
+
+	.about {
+		&__bio {
+			height: 100%;
+			width: 95%;
+			flex-direction: column-reverse;
+			align-items: center;
+			&--picture {
+				margin-top: 2rem;
+				.portrait img {
+					top: 4rem;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 55vw;
+					max-width: 240px;
+					height: auto;
+				}
+			}
+			&--text {
+				margin-top: 16rem;
+				width: 100%;
+				text-align: justify;
+
+				.content-tab {
+					p {
+						font-size: calc(0.6rem + 1.6vmin);
+						padding: 0 0.8rem 0 0;
+					}
 				}
 			}
 		}

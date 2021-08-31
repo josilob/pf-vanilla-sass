@@ -580,8 +580,8 @@ a:visited {
   font-size: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12rem, 3fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(12rem, 3fr));
+  -ms-grid-columns: (minmax(5rem, 50%))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 50%));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -962,6 +962,38 @@ a:visited {
   }
   .home__links #email:after {
     content: '* tap on the email to copy';
+  }
+  .about__bio {
+    height: 100%;
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__bio--picture {
+    margin-top: 2rem;
+  }
+  .about__bio--picture .portrait img {
+    top: 4rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 55vw;
+    max-width: 240px;
+    height: auto;
+  }
+  .about__bio--text {
+    margin-top: 16rem;
+    width: 100%;
+    text-align: justify;
+  }
+  .about__bio--text .content-tab p {
+    font-size: calc(0.6rem + 1.6vmin);
+    padding: 0 0.8rem 0 0;
   }
 }
 
