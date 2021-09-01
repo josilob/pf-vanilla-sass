@@ -13,6 +13,9 @@
 	min-height: 100vh;
 
 	.skills {
+		* {
+			// outline: 1px solid red;
+		}
 		.subtitle {
 			text-align: center;
 			color: #fff;
@@ -27,7 +30,6 @@
 			max-width: 850px;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
-			padding-top: 40px;
 			padding: 20px;
 			text-align: center;
 			margin: 0 auto;
@@ -190,8 +192,8 @@
 						&:hover {
 							cursor: pointer;
 							i {
-								outline: 2px dashed #e3a151;
-								color: #e3a151;
+								outline: 2px dashed #95bff2;
+								color: #95bff2;
 							}
 						}
 					}

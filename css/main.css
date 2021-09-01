@@ -718,7 +718,6 @@ a:visited {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-top: 40px;
   padding: 20px;
   text-align: center;
   margin: 0 auto;
@@ -904,8 +903,8 @@ a:visited {
 }
 
 .work .projects .project-content .project-links a:hover i {
-  outline: 2px dashed #e3a151;
-  color: #e3a151;
+  outline: 2px dashed #95bff2;
+  color: #95bff2;
 }
 
 .work .projects .project:nth-of-type(2n + 1) .project-content {
@@ -990,9 +989,46 @@ a:visited {
     font-size: calc(0.6rem + 1.6vmin);
     padding: 0 0.8rem 0 0;
   }
+  .work .skills .subtitle {
+    margin-top: -1rem;
+    padding-bottom: 1.5rem;
+  }
+  .work .skills .skillset {
+    width: 99%;
+    padding: 0.25rem;
+  }
+  .work .skills .skillset .tech-icons {
+    margin: 0.15rem;
+  }
+  .work .skills .skillset .tech-icons img {
+    margin: 0.2rem;
+  }
+  .work .projects .project {
+    width: 95%;
+    margin: 4rem auto;
+  }
+  .work .projects .project a::before {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .work .projects .project-image {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  .work .projects .project-content {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  .work .projects .project-content .tech-list li {
+    white-space: nowrap;
+  }
+  .work .projects .project:nth-of-type(2n + 1) .project-content {
+    grid-area: 1 / 1 / -1 / -1;
+    text-align: left;
+  }
+  .work .projects .project:nth-of-type(2n + 1) .project-image {
+    grid-area: 1 / 1 / -1 / -1;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .menu-btn {
     visibility: hidden;
   }

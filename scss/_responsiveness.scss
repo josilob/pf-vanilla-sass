@@ -120,10 +120,62 @@
 	}
 
 	.work {
+		.skills {
+			.subtitle {
+				margin-top: -1rem;
+				padding-bottom: 1.5rem;
+			}
+			.skillset {
+				width: 99%;
+				padding: 0.25rem;
+				.tech-icons {
+					margin: 0.15rem;
+					img {
+						margin: 0.2rem;
+					}
+				}
+			}
+		}
+
+		.projects {
+			.project {
+				width: 95%;
+				margin: 4rem auto;
+
+				a::before {
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+
+				&-image {
+					grid-area: 1 / 1 / -1 / -1;
+				}
+
+				&-content {
+					grid-area: 1 / 1 / -1 / -1;
+
+					.tech-list {
+						li {
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+
+			.project:nth-of-type(2n + 1) .project-content {
+				grid-area: 1 / 1 / -1 / -1;
+				text-align: left;
+			}
+			.project:nth-of-type(2n + 1) .project-image {
+				grid-area: 1 / 1 / -1 / -1;
+			}
+		}
 	}
 }
 
 @include media-md {
+}
+
+@include media-lg {
 	.menu-btn {
 		visibility: hidden;
 	}
@@ -144,9 +196,6 @@
 			}
 		}
 	}
-}
-
-@include media-lg {
 }
 
 @include media-xl {
