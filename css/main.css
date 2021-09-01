@@ -1011,20 +1011,20 @@ a:visited {
     background-color: rgba(0, 0, 0, 0.4);
   }
   .work .projects .project-image {
-    grid-area: 1 / 1 / -1 / -1;
+    grid-area: 1 / 1 / -1 / -1 !important;
   }
   .work .projects .project-content {
-    grid-area: 1 / 1 / -1 / -1;
+    grid-area: 1 / 1 / -1 / -1 !important;
   }
   .work .projects .project-content .tech-list li {
     white-space: nowrap;
   }
-  .work .projects .project:nth-of-type(2n + 1) .project-content {
-    grid-area: 1 / 1 / -1 / -1;
-    text-align: left;
-  }
-  .work .projects .project:nth-of-type(2n + 1) .project-image {
-    grid-area: 1 / 1 / -1 / -1;
+}
+
+@media screen and (min-width: 768px) {
+  .work .projects .project {
+    width: 95vw;
+    max-width: 55rem;
   }
 }
 

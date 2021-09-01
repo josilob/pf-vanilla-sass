@@ -147,11 +147,11 @@
 				}
 
 				&-image {
-					grid-area: 1 / 1 / -1 / -1;
+					grid-area: 1 / 1 / -1 / -1 !important;
 				}
 
 				&-content {
-					grid-area: 1 / 1 / -1 / -1;
+					grid-area: 1 / 1 / -1 / -1 !important;
 
 					.tech-list {
 						li {
@@ -160,19 +160,15 @@
 					}
 				}
 			}
-
-			.project:nth-of-type(2n + 1) .project-content {
-				grid-area: 1 / 1 / -1 / -1;
-				text-align: left;
-			}
-			.project:nth-of-type(2n + 1) .project-image {
-				grid-area: 1 / 1 / -1 / -1;
-			}
 		}
 	}
 }
 
 @include media-md {
+	.work .projects .project {
+		width: 95vw;
+		max-width: 55rem;
+	}
 }
 
 @include media-lg {
