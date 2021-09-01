@@ -757,11 +757,6 @@ a:visited {
   line-height: 1.2;
 }
 
-.work .skills .skillset .tech-icons:last-child img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
 .work .projects {
   margin-top: 2rem;
 }
