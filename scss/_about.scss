@@ -26,15 +26,14 @@
 			position: relative;
 
 			.portrait img {
-				position: absolute;
-				top: 17.5rem;
-				right: 0;
+				position: fixed;
+				top: 50vh;
+				right: 12.5vh;
 				transform: translateY(-50%);
 				height: 40vw;
 				max-height: 47.5rem;
 				mix-blend-mode: multiply;
-				filter: drop-shadow(0px 0px 4px #02023f) brightness(0.9) contrast(3.5)
-					grayscale(1);
+				filter: drop-shadow(0px 0px 4px #02023f) brightness(0.85) contrast(3);
 			}
 		}
 
