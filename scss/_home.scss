@@ -36,6 +36,7 @@
 	&__box {
 		z-index: 2;
 		font-family: 'Poppins', sans-serif;
+		transform: translateY(-0vh);
 
 		&--name {
 			color: #fff;
@@ -95,7 +96,7 @@
 		position: fixed;
 		top: calc(50% + 16rem);
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -150%);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

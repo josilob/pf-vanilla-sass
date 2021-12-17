@@ -150,6 +150,8 @@ a:visited {
 .home__box {
   z-index: 2;
   font-family: 'Poppins', sans-serif;
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
 }
 
 .home__box--name {
@@ -213,8 +215,8 @@ a:visited {
   position: fixed;
   top: calc(50% + 16rem);
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -947,7 +949,7 @@ a:visited {
     display: block;
     min-width: 18rem;
     min-height: 14rem;
-    top: calc(50% + 9rem);
+    top: calc(50% + 25rem);
     padding: 1.5rem;
   }
   .home__links div {
